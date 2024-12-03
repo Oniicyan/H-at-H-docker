@@ -17,6 +17,8 @@ if [ $HatH_KEY ]
 		fi
 fi
 
+[ -n $ListenPort ] && HatH_ARGS="$HatH_ARGS --port=$ListenPort"
+
 if [ $ImageProxyHost ] && [ $ImageProxyType ] && [ $ImageProxyPort ]
 	then
  		echo "Proxy arguments found! "
